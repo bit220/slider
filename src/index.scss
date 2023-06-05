@@ -1,0 +1,51 @@
+@import-normalize;
+
+:root {
+  --swiper-theme-color: #FFFFFF !important;
+  --swiper-navigation-size: 16px !important;
+
+  --main-padding: 137px;
+}
+@media (max-width: 768px) {
+  :root {
+    --main-padding: 78px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-top: 104px;
+  background: #131426;
+  color: #FFFFFF;
+}
+.history {
+  padding-left: var(--main-padding);
+  margin-bottom: 50px;
+}
+.history__title {
+  font-size: 46px;
+  line-height: 48px;
+  margin-bottom: 24px;
+}
+.history__description {
+  font-size: 16px;
+  line-height: 24px;
+  width: 664px;
+  margin-bottom: 80px;
+
+  @media (max-width: 768px) {
+
+  }
+}
