@@ -1,0 +1,36 @@
+
+.swiper-button-prev, .swiper-button-next {
+  border: 1px solid #FFFFFF;
+  height: 48px !important;
+  width: 48px !important;
+  border-radius: 50%;
+  top: 400px !important;
+
+  @media (max-width: 768px) {
+    top: 480px !important;
+  }
+
+  @media (max-width: 375px) {
+    top: 420px !important;
+  }
+}
+.swiper-button-prev {
+  left: 0 !important;
+  margin-left: var(--main-padding);
+}
+.swiper-button-next {
+  margin-right: var(--main-padding);
+}
+.swiper-button-prev:after {
+  content: '' !important;
+  width: 16px;
+  height: 16px;
+  background: url("./../../img/nav_arrow.svg") center center no-repeat;
+  transform: rotate(180deg);
+}
+.swiper-button-prev:after, .swiper-button-next:after {
+  content: '' !important;
+  width: 16px;
+  height: 16px;
+  background: url("./../../img/nav_arrow.svg") center center no-repeat;
+}

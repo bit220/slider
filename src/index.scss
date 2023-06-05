@@ -5,10 +5,17 @@
   --swiper-navigation-size: 16px !important;
 
   --main-padding: 137px;
+  --slide-width: 360px;
 }
 @media (max-width: 768px) {
   :root {
     --main-padding: 78px;
+    --slide-width: 183px;
+  }
+}
+@media (max-width: 375px) {
+  :root {
+    --main-padding: 17px;
   }
 }
 
@@ -38,6 +45,14 @@ body {
   font-size: 46px;
   line-height: 48px;
   margin-bottom: 24px;
+
+  @media (max-width: 768px) {
+    font-size: 40px;
+  }
+  @media (max-width: 375px) {
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
 .history__description {
   font-size: 16px;
@@ -46,6 +61,7 @@ body {
   margin-bottom: 80px;
 
   @media (max-width: 768px) {
-
+    width: 100%;
+    padding-right: var(--main-padding);
   }
 }

@@ -1,25 +1,45 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
 
+import TimeLineItem from "./components/TimeLineItem/TimeLineItem";
+
+import {Navigation} from 'swiper';
+import {Swiper, SwiperSlide} from 'swiper/react';
+
+import "swiper/css";
+import "swiper/css/navigation";
+
+import './components/styles/swiper-buttons.scss'
+
+
+import timeline from './data/TimeLineData'
+
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    return (
+        <div className="App">
+            <div className="history">
+                <h1 className="history__title">История</h1>
+                <div className="history__description">
+                    Устойчивая стратегия роста, концентрация на основных компетенциях и клиентоориентированность —
+                    ключевые факторы успеха на рынке металлопродукции в течение 17 лет.
+                </div>
+            </div>
+
+            <Swiper
+                modules={[Navigation]}
+                slidesPerView={"auto"}
+                navigation={true}
+            >
+                {timeline.map(block =>
+                    <SwiperSlide key={block.year}>
+                        <TimeLineItem year={block.year} info={block.info}/>
+                    </SwiperSlide>
+                )}
+            </Swiper>
+        </div>
+    );
 }
 
 export default App;
